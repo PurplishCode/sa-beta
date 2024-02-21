@@ -4,15 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IMV | Welcome</title>
-
+    <title>IMV | Login</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
 </head>
-<body>
-@extends('layout.baseplate')
+<body class="p-0 m-0">
 
-@section('content')
 
-@endsection
-
+<script src="bootstrap.bundle.min.js"></script>
 </body>
 </html>
