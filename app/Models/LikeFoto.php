@@ -10,8 +10,10 @@ class LikeFoto extends Model
 {
     use HasFactory;
 
-    
+    protected $primaryKey = "id";
+
     protected $guarded = ["id"];
+
     protected $fillable = 
     ["fotoID",
     "userID"];

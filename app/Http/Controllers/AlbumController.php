@@ -2,16 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Foto;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
-class Album extends Controller
+class AlbumController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('home.album.index', ["title" => "IMV | Album"]);
     }
 
     /**

@@ -4,22 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="{{  asset('bootstrap.bundle.js') }}">
 </head>
 <body>
 {{-- BASEPLATE UI. --}}
 
-@include('layout.navbar')
+@include('layout.sidenav')
 <div class="container-fluid">
-    <div class="row">
-        @include('layout.sidebar')
-        <div class="col">
-            @yield('content')
-        </div>
-    </div>
+    @yield('content')
 </div>
 
 
-    <script src="bootstrap.bundle.min.js"></script>
+    <script src="{{ asset('bootstrap.bundle.js') }}"></script>
 </body>
 </html>

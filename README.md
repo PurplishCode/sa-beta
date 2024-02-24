@@ -12,6 +12,11 @@
 ## UPDATE LOG
 
 > [ 21-02-2024 ]
-- Layout navigation/sidebar unfinished.
+- Layout navigation/sidebar half-baked.
 - Models + Migrations necessary table.
 
+> [ 24-02-2024 ]
+- Refactoring and configurations.
+- Requests [ Album  Foto - Session ]
+- Controller [ Create ~ Foto, Index ~ Foto, Index - Album, Create ~ Session, Login ~ Session ]
+- Routing (Resource) [ Album | Foto | Session ]

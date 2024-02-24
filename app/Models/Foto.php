@@ -11,6 +11,8 @@ class Foto extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = "id";
+    
     protected $guarded = ["id"];
 
     protected $fillable = [
