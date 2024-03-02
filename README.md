@@ -1,12 +1,12 @@
-### ABOUT IMV
+### ABOUT SA
 
-"Image Mutual Virtual, or IMV is a gallery website to uniquely store and view your pictures anywhere, everwhere! IMV also includes the feature of liking or commenting pictures made by others as well. The choice is yours."
+"Siege Albus, or SA is a gallery website to uniquely store and view your pictures anywhere, everywhere! SA also includes the feature to either like or comment other users creation. Revel in its eccentric experience now!"
 
-## What does IMV has to offer?
+## What does SA has to offer?
 - Users has the ability to register, login, logout their account.
 - Users can view their album and picture respectively.
 - Users can view other users picture.
-- Users can comment / like others picture.
+- Users can comment / like other users picture.
 
 
 ## UPDATE LOG
@@ -20,3 +20,8 @@
 - Requests [ Album  Foto - Session ]
 - Controller [ Create ~ Foto, Index ~ Foto, Index - Album, Create ~ Session, Login ~ Session ]
 - Routing (Resource) [ Album | Foto | Session ]
+
+> [ 02 - 03 - 2024 ]
+- Session LOGIN / REGISTRATION succesful.
+- Side-navigation tweaks.
+- Displaying total amount album / foto [ In progress ]

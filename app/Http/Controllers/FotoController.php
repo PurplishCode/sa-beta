@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\FotoRequest;
 use App\Models\Foto;
-use App\Http\Requests\StoreFotoRequest;
 use App\Http\Requests\UpdateFotoRequest;
 use Illuminate\Support\Facades\DB;
 
 class FotoController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware(['auth']);
+    }
     /**
      * Display a listing of the resource.
      */
@@ -17,9 +21,9 @@ class FotoController extends Controller
     {
         
         $userID = auth()->user()->id;
-        $userFoto = DB::table("id", $userID)->join('foto', 'foto.id', '=', 'users.id')->select('foto.*')->get();
+        $userFoto = DB::table("users")->where("users.id", $userID)->join('foto', 'foto.id', '=', 'users.id')->select('foto.*')->get();
 
-        return view('home.foto.index', compact('userFoto'))->with("title", "IMV | Homepage");
+        return view('home.foto.index', compact('userFoto'))->with("title", "SA | Foto");
     }
 
     /**

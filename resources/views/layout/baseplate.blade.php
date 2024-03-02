@@ -10,9 +10,11 @@
 {{-- BASEPLATE UI. --}}
 
 @include('layout.sidenav')
-<div class="container-fluid">
+<div class="content-container">
     @yield('content')
+
 </div>
+
 
 
     <script src="{{ asset('bootstrap.bundle.js') }}"></script>

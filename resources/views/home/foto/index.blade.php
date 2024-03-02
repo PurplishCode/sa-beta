@@ -7,6 +7,8 @@
     <title>{{ $title }}</title>
 </head>
 <body>
-    
+    @foreach($userFoto as $eachFoto)
+        
+    @endforeach
 </body>
 </html>

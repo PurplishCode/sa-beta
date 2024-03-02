@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\FotoController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\SessionController;
 use App\Models\Foto;
 use Illuminate\Support\Facades\Route;
@@ -25,6 +26,8 @@ Route::middleware("guest")->group(function() {
     Route::resource('/session', SessionController::class);
 
     Route::post('session.post', [SessionController::class, 'login'])->name("session.post");
+
+    Route::post('session.input', [SessionController::class, 'store'])->name('session.input');
 });
 
 
@@ -32,4 +35,6 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('/users/album', AlbumController::class);
     
     Route::resource('/users/foto', FotoController::class);
+
+    Route::get('/users/home', [HomeController::class, "index"])->name("home.index");
 });
