@@ -37,4 +37,6 @@ Route::middleware(['auth'])->group(function(){
     Route::resource('/users/foto', FotoController::class);
 
     Route::get('/users/home', [HomeController::class, "index"])->name("home.index");
+
+    Route::post('logout', [SessionController::class, 'logout'])->name('logout');
 });

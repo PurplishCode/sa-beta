@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
     @include('layout.style')
+
 </head>
 
 <body>
@@ -49,8 +50,10 @@
             <button class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas" type="button"
                 aria-label="Close"></button>
         </div>
-
-       
+        <div class="offcanvas-body text-white">
+            <i class="bi-instagram"></i>
+            <span class="topic"><form action="{{ route('logout') }}", method="POST">@csrf @method('POST') <button class="btn" style="background-color:gray;" type="submit">LOGOUT</button></form></span>
+        </div>
 
 
         </div>

@@ -77,7 +77,7 @@ $succesful = Auth::attempt($credentials);
 
 if($succesful) {
    $request->session()->regenerate();
- return to_route("home.index")->withSuccess('Selamat datang, anda berhasil Login!');
+ return to_route("home.index")->withSuccess('Selamat datang ' . $allocate->username . ', anda berhasil Login!');
 } else {
 return redirect('session')->withError("Failed to login.");
 }
@@ -115,5 +115,13 @@ return redirect('session')->withError("Failed to login.");
     public function destroy(string $id)
     {
         //
+    }
+
+    public function logout(): RedirectResponse
+    {
+        Auth::logout();
+        session()->flush();
+
+        return redirect('session');
     }
 }

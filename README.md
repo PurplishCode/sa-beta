@@ -23,5 +23,6 @@
 
 > [ 02 - 03 - 2024 ]
 - Session LOGIN / REGISTRATION succesful.
-- Side-navigation tweaks.
+- Side-navigation tweaks [ Updating ].
 - Displaying total amount album / foto [ In progress ]
+- Session logout finished.

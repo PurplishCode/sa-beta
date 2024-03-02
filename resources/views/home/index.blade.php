@@ -11,6 +11,12 @@
 <body>
     @extends('layout.baseplate')
     @section('content')
+    @if(session('success'))
+    <div class="alert alert-success text-center" role="alert">
+        {{ session('success') }}
+        
+    </div>
+@endif
 
         <table class="table table-striped" border="1">
 
