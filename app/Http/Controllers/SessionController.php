@@ -77,7 +77,7 @@ $succesful = Auth::attempt($credentials);
 
 if($succesful) {
    $request->session()->regenerate();
- return to_route("home.index")->withSuccess('Selamat datang ' . $allocate->username . ', anda berhasil Login!');
+ return to_route("home.index")->withSuccess('Selamat datang kembali ' . $allocate->username . '!');
 } else {
 return redirect('session')->withError("Failed to login.");
 }

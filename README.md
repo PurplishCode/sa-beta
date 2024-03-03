@@ -26,3 +26,6 @@
 - Side-navigation tweaks [ Updating ].
 - Displaying total amount album / foto [ In progress ]
 - Session logout finished.
+
+> [ 03- 03 - 2024 ]
+- Homepage Statistic Layout.

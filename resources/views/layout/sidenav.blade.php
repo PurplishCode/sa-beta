@@ -8,6 +8,13 @@
     <link rel="stylesheet" href="{{ asset('bootstrap.min.css') }}">
     @include('layout.style')
 
+    <style>
+.badum:hover {
+    color: gray;
+    background-color: purple;
+    
+}
+    </style>
 </head>
 
 <body>
@@ -16,23 +23,23 @@
         <div class="container-fluid">
             <div class="d-flex justify-content-start align-items-center">
                 <div class="d-md-block d-none">
-                    <img src="{{ asset('logo-removebg-preview.png') }}" alt="logo" width="40" height="40" class="d-inline-block align-text-top rounded-circle border">
+                    <img src="{{ asset('logo-removebg-preview.png') }}" alt="logo" width="40" height="40"
+                        class="d-inline-block align-text-top rounded-circle border">
                 </div>
-                <a href="#"
-                    class="navbar-brand text-white fw-bold px-3" style="font-family: cursive">SA</a>
+                <a href="#" class="navbar-brand text-white fw-bold px-3" style="font-family: cursive">SA</a>
                 <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvas"
                     aria-label="Control Sidebar" aria-controls="offcanvas">
                     <i class="bi bi-list text-white"></i>
                 </button>
-           
+
             </div>
         </div>
         @if (Auth::check())
         <nav class="header-nav ms-auto">
             <div class="d-flex align-items-center">
-            <div class="px-2 py-2 mb-1">
-                <div class="container d-flex flex-wrap justify-content-center text-white fw-bold">PENGGUNA</div>
-            </div>
+                <div class="px-2 py-2 mb-1">
+                    <div class="container d-flex flex-wrap justify-content-center text-white fw-bold">PENGGUNA</div>
+                </div>
             </div>
         </nav>
         @else
@@ -41,22 +48,35 @@
                 <div></div>
             </div>
         </nav>
-            @endif
+        @endif
     </header>
 
     <div class="offcanvas offcanvas-start bg-dark" id="offcanvas" style="width: 250px;">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title fw-bold text-white">Navigation Menu</h5>
+            <h5 class="offcanvas-title fw-bold text-white">Funny Bar</h5>
             <button class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas" type="button"
                 aria-label="Close"></button>
         </div>
         <div class="offcanvas-body text-white">
-            <i class="bi-instagram"></i>
-            <span class="topic"><form action="{{ route('logout') }}", method="POST">@csrf @method('POST') <button class="btn" style="background-color:gray;" type="submit">LOGOUT</button></form></span>
+
+
+            <div class="container-fluid bg-success p-2 rounded border"><a href="{{ route('foto.index') }}"
+                    class="text-white text-center fw-bold badum" style="text-decoration: none;">Foto</a></div>
+
+            <div class="pt-4"></div>
+
+            <div class="container-fluid bg-success p-2 border rounded"><a href="{{ route('album.index') }}"
+                    class="text-white text-center fw-bold" style="text-decoration: none;">Album</a></div>
+
+
+
         </div>
 
 
-        </div>
+    </div>
+
+
+    </div>
     </div>
     <script src="{{ asset('bootstrap.bundle.js') }}"></script>
 </body>

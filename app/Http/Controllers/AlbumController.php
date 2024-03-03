@@ -13,7 +13,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        return view('home.album.index', ["title" => "IMV | Album"]);
+        return view('home.album.index', ["title" => "SA | Album"]);
     }
 
     /**
