@@ -65,13 +65,18 @@
 
 
            @if (Auth::check())
+           <div class="container-fluid bg-success p-2 rounded border"><a href="{{ route('home.index') }}"
+            class="text-white text-center fw-bold badum" style="text-decoration: none;">Homepage</a></div>
+
+    <div class="pt-4"></div>
+
            <div class="container-fluid bg-success p-2 rounded border"><a href="{{ route('foto.index') }}"
             class="text-white text-center fw-bold badum" style="text-decoration: none;">Foto</a></div>
 
     <div class="pt-4"></div>
 
     <div class="container-fluid bg-success p-2 border rounded"><a href="{{ route('album.index') }}"
-            class="text-white text-center fw-bold" style="text-decoration: none;">Album</a></div>
+            class="text-white text-center fw-bold badum" style="text-decoration: none;">Album</a></div>
 
 
 

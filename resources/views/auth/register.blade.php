@@ -22,14 +22,14 @@
                         @csrf
                         @method('POST')
                         <label for="username" class="fw-bold py-2">Username:</label>
-                        <input type="text" class="form-control" name="username">
+                        <input type="text" class="form-control" name="username" placeholder="Your username..">
                         @if ($errors->has('username'))
                         <span class="text-danger">{{ $errors->first('username') }}</span>
                         @endif
                 </div>
                 <div class="col text-white">
                     <label for="password" class="fw-bold py-2">Password:</label>
-                    <input type="password" class="form-control" name="password">
+                    <input type="password" class="form-control" name="password" placeholder="Ex. Password123">
                 </div>
                 @if ($errors->has('password'))
                 <span class="text-danger">{{ $errors->first('password') }}</span>
@@ -39,14 +39,14 @@
             <div class="row py-1">
                 <div class="col text-white">
                     <label for="namaLengkap" class="fw-bold py-2">Nama Lengkap:</label>
-                    <input type="text" class="form-control" name="namaLengkap">
+                    <input type="text" class="form-control" name="namaLengkap" placeholder="Your full name..">
                     @if ($errors->has('namaLengkap'))
                     <span class="text-danger">{{ $errors->first('namaLengkap') }}</span>
                     @endif
                 </div>
                 <div class="col text-white">
                     <label for="email" class="fw-bold py-2">Email:</label>
-                    <input type="email" class="form-control" name="email">
+                    <input type="email" class="form-control" name="email" placeholder="@example.com">
                     @if ($errors->has('email'))
                     <span class="text-danger">{{ $errors->first('email') }}</span>
                     @endif
@@ -54,7 +54,7 @@
                 <div class="row py-2 px-3">
                     <div class="col">
                         <label for="" class="fw-bold text-white py-2">Alamat:</label>
-                        <textarea name="alamat" class="form-control" style="resize: none"
+                        <textarea name="alamat" class="form-control" style="resize: none;width:105%"
                             placeholder="Ex. Jl Bumi Manti 2"></textarea>
                         @if ($errors->has('alamat'))
                         <span class="text-danger">{{ $errors->first('alamat') }}</span>
@@ -66,6 +66,12 @@
                 </div>
             </div>
             </form>
+
+<div class="row">
+    <div class="col">    <p class="text-white">Already have an account? <span><a href="{{ route('session.index') }}">Sign in!</a></span></p> 
+    </div>
+</div>
+</div>
         </div>
         </div>
 

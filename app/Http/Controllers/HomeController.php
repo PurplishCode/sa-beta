@@ -21,11 +21,15 @@ public function index(): View
 //     $sa = DB::table('users')->where("users.id", $AuS)->join("foto", "foto.user_id", "=", "users.id")->join("album", "album.user_id", "=", "users.id")->select(DB::raw("COUNT(DISTINCT foto.id) as foto_amount"), DB::raw("COUNT(DISTINCT album.id) as album_amount"))->get();
 
 $user = Auth::user();
-$albumAmount = $user->album->count();
-$fotoAmount = $user->foto->count();
+$albumAmount = $user->albums ? $user->albums->count() : 0;
+$fotoAmount = $user->fotos ? $user->fotos->count() : 0;
 
 
-    return view("home.index", ["title" => "SA | Homepage"])->with("albumcount", $albumAmount)->with("fotocount", $fotoAmount);
+if($albumAmount <= 0 || $fotoAmount <= 0) {
+
+}
+
+    return view("home.index", ["title" => "SA | Homepage"])->with("albumcount", $albumAmount)->with("fotocount", $fotoAmount)->with('user', $user);
 
 }
 }

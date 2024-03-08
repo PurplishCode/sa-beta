@@ -119,6 +119,6 @@ return redirect('session')->withError("Failed to login.");
         Auth::logout();
         session()->flush();
 
-        return redirect('session');
+        return redirect('session')->withSuccess('You have logged out!');
     }
 }
