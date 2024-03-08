@@ -53,9 +53,6 @@ $accepted = User::create($kee);
 
 
 if($accepted) {
-        // Check LOG
-        Log::info("Data is succesfully stored.");
-
         return redirect('session')->withSuccess("You have successfully created an account!");
 
     } else {

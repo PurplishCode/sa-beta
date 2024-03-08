@@ -28,7 +28,7 @@ class Album extends Model
     }
 
     
-    public function foto(): HasMany
+    public function fotos(): HasMany
     {
         return $this->hasMany(Foto::class);
     }

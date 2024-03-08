@@ -30,7 +30,7 @@ class Foto extends Model
     }
 
     
-    public function album(): BelongsTo
+    public function albums(): BelongsTo
     {
         return $this->belongsTo(Foto::class);
     }

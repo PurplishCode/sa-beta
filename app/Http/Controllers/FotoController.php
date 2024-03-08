@@ -21,7 +21,7 @@ class FotoController extends Controller
     {
         
         $userID = auth()->user()->id;
-        $userFoto = DB::table("users")->where("users.id", $userID)->join('foto', 'foto.id', '=', 'users.id')->select('foto.*')->get();
+        $userFoto = DB::table("users")->where("users.id", $userID)->join('fotos', 'fotos.user_id', '=', 'users.id')->select('fotos.*')->get();
 
         return view('home.foto.index', compact('userFoto'))->with("title", "SA | Foto");
     }

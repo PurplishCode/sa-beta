@@ -19,7 +19,7 @@ return new class extends Migration
             
             $table->foreign("user_id")->references("id")->on("users");
             
-            $table->foreign("foto_id")->references("id")->on("foto");
+            $table->foreign("foto_id")->references("id")->on("fotos");
             
             
             $table->timestamps();

@@ -24,7 +24,6 @@ class AlbumRequest extends FormRequest
         return [
             "namaAlbum" => "string|required|max:20",
             "deskripsi" => "string|required|max:254",
-            "tanggalDibuat" => "date"
         ];
     }
 }

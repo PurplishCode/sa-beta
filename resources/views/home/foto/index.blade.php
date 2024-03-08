@@ -7,8 +7,11 @@
     <title>{{ $title }}</title>
 </head>
 <body>
+    @extends('layout.baseplate')
+    @section('content')
     @foreach($userFoto as $eachFoto)
         
-    @endforeach
+    @endforeach    
+    @endsection
 </body>
 </html>

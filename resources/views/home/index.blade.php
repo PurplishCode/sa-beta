@@ -25,10 +25,10 @@
     <h4 class="fw-bold text-center d-flex justify-content-center pt-3 text-white">STATISTIC</h4>
     <div class="row pt-5">
        @foreach ($sa as $item)
-       <div class="container-fluid col-4 bg-dark p-4 text-white border rounded fw-bold"><span class="bg-white rounded p-3 px-4 text-black">{{ $item[0]->foto_amount }}</span>
+       <div class="container-fluid col-4 bg-dark p-4 text-white border rounded fw-bold"><span class="bg-white rounded p-3 px-4 text-black">{{ $fotocount }}</span>
     Total Foto Created
     </div>
-       <div class="container-fluid col-4 bg-dark p-4 text-white border rounded fw-bold"><span class="bg-white rounded p-3 px-4 text-black">{{ $item[0]->album_amount }}</span>
+       <div class="container-fluid col-4 bg-dark p-4 text-white border rounded fw-bold"><span class="bg-white rounded p-3 px-4 text-black">{{ $albumcount }}</span>
     Total Album Created
     </div>
     

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Album;
 use App\Models\Foto;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
 
 class AlbumController extends Controller
 {
@@ -29,9 +31,25 @@ class AlbumController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+      
 
+        $arrayData = [
+            'namaAlbum' => $request->namaAlbum,
+            'deskripsiAlbum' => $request->deskripsiAlbum,
+            'tanggalDibuat' => now(),
+            'userID' => auth()->user()->id,
+
+        ];
+$album = new Album();
+$savedDATA = $album->create($arrayData);
+    
+if($savedDATA) {
+    Log::info($savedDATA);
+return to_route('album.index')->withSuccess('Your Album has successfully been saved!');
+} else {
+    return to_route('album.create')->withError('Sorry, your request is unsuccesful.');
+}
+}
     /**
      * Display the specified resource.
      */

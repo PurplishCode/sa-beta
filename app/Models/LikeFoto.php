@@ -18,7 +18,7 @@ class LikeFoto extends Model
     ["fotoID",
     "userID"];
 
-public function foto(): BelongsTo
+public function fotos(): BelongsTo
 {
     return $this->belongsTo(Foto::class);
 }

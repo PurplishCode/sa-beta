@@ -19,7 +19,7 @@ class KomentarFoto extends Model
     "userID","
     isiKomentar"];
 
-public function foto(): BelongsTo
+public function fotos(): BelongsTo
 {
     return $this->belongsTo(Foto::class);
 }

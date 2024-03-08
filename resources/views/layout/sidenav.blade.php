@@ -45,7 +45,11 @@
         @else
         <nav class="header-nav ms-auto">
             <div class="d-flex align-items-center">
-                <div></div>
+                <div class="px-2 py-1 mb-1">
+                    <div class="d-flex flex-wrap">
+                        <a href="{{ route('session.index') }}" class="btn btn-success">LOGIN</a>
+                    </div>
+                </div>
             </div>
         </nav>
         @endif
@@ -53,24 +57,34 @@
 
     <div class="offcanvas offcanvas-start bg-dark" id="offcanvas" style="width: 250px;">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title fw-bold text-white">Funny Bar</h5>
+            <h5 class="offcanvas-title fw-bold text-white">Dashboard</h5>
             <button class="btn-close text-reset bg-white" data-bs-dismiss="offcanvas" type="button"
                 aria-label="Close"></button>
         </div>
         <div class="offcanvas-body text-white">
 
 
-            <div class="container-fluid bg-success p-2 rounded border"><a href="{{ route('foto.index') }}"
-                    class="text-white text-center fw-bold badum" style="text-decoration: none;">Foto</a></div>
+           @if (Auth::check())
+           <div class="container-fluid bg-success p-2 rounded border"><a href="{{ route('foto.index') }}"
+            class="text-white text-center fw-bold badum" style="text-decoration: none;">Foto</a></div>
 
-            <div class="pt-4"></div>
+    <div class="pt-4"></div>
 
-            <div class="container-fluid bg-success p-2 border rounded"><a href="{{ route('album.index') }}"
-                    class="text-white text-center fw-bold" style="text-decoration: none;">Album</a></div>
+    <div class="container-fluid bg-success p-2 border rounded"><a href="{{ route('album.index') }}"
+            class="text-white text-center fw-bold" style="text-decoration: none;">Album</a></div>
 
 
 
-        </div>
+</div>
+           @else
+<div class="offcanvas-body">
+    
+<div class="cointainer-fluid bg-success fw-bold p-2 rounded">
+    <a href="" class="text-center text-white" style="text-decoration: none;"></a>
+</div>
+           
+</div>
+           @endif
 
 
     </div>

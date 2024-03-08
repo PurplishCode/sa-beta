@@ -63,13 +63,13 @@ class User extends Authenticatable
     }
 
     
-    public function foto(): HasMany
+    public function fotos(): HasMany
     {
         return $this->hasMany(Foto::class);
     }
 
     
-    public function album(): HasMany
+    public function albums(): HasMany
     {
         return $this->hasMany(Album::class);
     }
