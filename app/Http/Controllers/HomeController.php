@@ -28,4 +28,20 @@ $fotoAmount = $user->fotos ? $user->fotos->count() : 0;
     return view("home.index", ["title" => "SA | Homepage"])->with("albumcount", $albumAmount)->with("fotocount", $fotoAmount)->with('user', $user);
 
 }
+
+public function profile(): View
+{
+    return view('home.profile');
 }
+
+public function hall(): View
+{
+    return view('home.hall-of-image');
+}
+
+public function activity(): View
+{
+    return view('home.activity');
+}
+}
+

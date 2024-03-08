@@ -49,4 +49,11 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/users/home', [HomeController::class, "index"])->name("home.index");
 
     Route::get('/logout', [SessionController::class, 'logout']);
+
+    
+    Route::get('/users/profile', [HomeController::class, 'profile']);
+
+    Route::get('/hall', [HomeController::class, 'hall']);
+
+    Route::get('/users/activity', [HomeController::class, 'activity']);
 });

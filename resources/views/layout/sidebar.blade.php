@@ -10,7 +10,7 @@
         </li>
         @if (Auth::check())
             <li class="nav-item">
-                <a class="nav-link collapsed" href="{{ url('/profile') }}">
+                <a class="nav-link collapsed" href="{{ url('/users/profile') }}">
                     <i class="bi bi-person"></i>
                     <span style="color: #055E68">Profil Saya</span>
                 </a>
@@ -31,20 +31,20 @@
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/petugas') }}">
+                            <a href="{{ url('/users/album') }}">
                                 <i class="bi bi-circle"></i>
-                                <span style="color: #1b31fc">List Album</span>
+                                <span style="color: #1b31fc">Album List</span>
                             </a>
                         </li>
                         <li>
-                            <a href="{{ url('/barang') }}">
+                            <a href="{{ url('/hall') }}">
                                 <i class="bi bi-circle"></i>
                                 <span style="color: #1b31fc">Hall of Image</span>
                             </a>
                         </li>
                     </ul>
                     <li class="nav-item">
-                        <a class="nav-link collapsed" href="{{ url('/laporan') }}">
+                        <a class="nav-link collapsed" href="{{ url('/users/activity') }}">
                             <i class="bi bi-clipboard-data"></i>
                             <span style="color: #1b31fc">Lihat Aktifitas</span>
                         </a>

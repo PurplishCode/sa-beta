@@ -11,6 +11,21 @@
     
 @section('content')
 
+<div class="p-3">
+    
+    <div class="pagetitle">
+        <h1 style="color:#1b31fc;">About Us</h1>
+    </div>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item ">
+                <a href="{{ url('/') }}">Home</a>
+            </li>
+            <li class="breadcrumb-item active"><a href="{{ url('guest/about') }}">About us</a></li>
+        </ol>
+    </nav>
+
+</div>
 @endsection
 </body>
 </html>

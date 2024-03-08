@@ -1,4 +1,4 @@
-<header class="header fixed-top d-flex align-items-center" id="header">
+<header class="header d-flex align-items-center" id="header">
     <div class="d-flex align-items-center justify-content-between">
         <a href="{{ url('/') }}" class="logo d-flex jusify-content-center">
         <img src="{{ asset('assets/logo.PNG') }}" alt="">

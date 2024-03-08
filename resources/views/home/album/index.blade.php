@@ -10,12 +10,21 @@
     @extends('layout.baseplate')
     @section('content')
     
-<nav aria-label="breadcrumb" class="pt-2 px-3">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Album /</li>
-    </ol>
-</nav>
+<div class="p-3">
+    
+    <div class="pagetitle">
+        <h1 style="color:#1b31fc;">Album List</h1>
+    </div>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item ">
+                <a href="{{ url('/') }}">Home</a>
+            </li>
+            <li class="breadcrumb-item active"><a href="{{ url('users/album') }}">Album List</a></li>
+        </ol>
+    </nav>
+
+</div>
     @endsection
 </body>
 </html>

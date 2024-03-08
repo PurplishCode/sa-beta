@@ -19,11 +19,21 @@
     
 @endif
 
-<nav aria-label="breadcrumb" class="pt-2 px-3">
-    <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">{{ request()->segment(2) }}</li>
-    </ol>
-</nav>
+<div class="p-3">
+    
+    <div class="pagetitle">
+        <h1>Home</h1>
+    </div>
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active">
+                <a href="{{ url('/') }}">Home</a>
+            </li>
+        </ol>
+    </nav>
+
+</div>
+
     <div class="pt-3">
     
 <div class=" py-3 container border rounded px-3" style="background-image: linear-gradient(-155deg,rgba(159, 129, 242, 0.708) 45%,rgba(255, 255, 255, 0.08) 15%),linear-gradient(258deg,rgba(132, 87, 255, 0.1),rgba(77,8,211,.2));background-color: rgba(88, 74, 214, 0.9);">
