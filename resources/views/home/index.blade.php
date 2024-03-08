@@ -39,46 +39,9 @@
     </div>
     
      
-
+    </div>
     
     </div>    
-<div class="pt-5">
-    <h6 class="fw-bold text-white py-3">User Profile:</h6></div>
-    <p class="text-white">Nama Pengguna: {{ $user->namaLengkap }}</p>
-    <p class="text-white">Email: {{ $user->email }}</p>
-    <form action="{{ route('logout') }}" method="POST">@csrf @method('POST') <button type="submit" class="btn btn-danger">LOGOUT</button></form>
-    </div>
-</div>
-<div class="pt-5">
-    <h2 class="d-flex justify-content-center text-center fw-bold ">TELUSURI BERAGAM FOTO MENARIK!</h2>
-    <span class="d-flex justify-content-center pt-5">
-        <div id="carouselExample" class="carousel" style="width: 300px;">
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="{{ asset('logo-removebg-preview.png') }}" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="{{ asset('logo.PNG') }}" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="{{ asset('logo-removebg-preview.png') }}"  class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-              <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div></span>
-</div>
-<script>
-    $('.carousel').carousel({
-        interval: 2000
-    })
-</script>
     @endsection
 </body>
 

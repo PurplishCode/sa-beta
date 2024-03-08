@@ -36,3 +36,6 @@
 - Validation Process [ In work ]
 - Discarded Deprecated JS / CSS bundle.
 - Seperating two files [ Sidebar | Navbar ]
+- Sidebar && Navbar completion.
+- Added more files to work with. [ About us, Profile, Activity Log, etc.. ]
+- Revamped Login - Register Layout [ In work ]

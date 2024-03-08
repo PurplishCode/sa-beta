@@ -18,16 +18,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+
+Route::get('/about', function(){
+    return view('guest.about-us');
 });
 
 Route::middleware("guest")->group(function() {
+    Route::get('/', function () {
+        return view('welcome');
+    });
+    
     Route::resource('/session', SessionController::class);
 
     Route::post('session.post', [SessionController::class, 'login'])->name("session.post");
 
     Route::post('session.input', [SessionController::class, 'store'])->name('session.input');
+
+    Route::get('/gallery', function(){
+        return view('guest.gallery');
+    });
 });
 
 
@@ -38,5 +48,5 @@ Route::middleware(['auth'])->group(function(){
 
     Route::get('/users/home', [HomeController::class, "index"])->name("home.index");
 
-    Route::post('logout', [SessionController::class, 'logout'])->name('logout');
+    Route::get('/logout', [SessionController::class, 'logout']);
 });

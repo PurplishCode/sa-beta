@@ -25,10 +25,6 @@ $albumAmount = $user->albums ? $user->albums->count() : 0;
 $fotoAmount = $user->fotos ? $user->fotos->count() : 0;
 
 
-if($albumAmount <= 0 || $fotoAmount <= 0) {
-
-}
-
     return view("home.index", ["title" => "SA | Homepage"])->with("albumcount", $albumAmount)->with("fotocount", $fotoAmount)->with('user', $user);
 
 }
