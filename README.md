@@ -24,8 +24,15 @@
 > [ 02 - 03 - 2024 ]
 - Session LOGIN / REGISTRATION succesful.
 - Side-navigation tweaks [ Updating ].
-- Displaying total amount album / foto [ In progress ]
+- Displaying total amount album / foto [ In work ]
 - Session logout finished.
 
-> [ 03- 03 - 2024 ]
+> [ 03 - 03 - 2024 ]
 - Homepage Statistic Layout.
+
+> [ 08 - 03 - 2024 ]
+- Configurating Javascript library
+- Adjustment of Laravel Mix.
+- Validation Process [ In work ]
+- Discarded Deprecated JS / CSS bundle.
+- Seperating two files [ Sidebar | Navbar ]

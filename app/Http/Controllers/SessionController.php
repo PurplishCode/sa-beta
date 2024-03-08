@@ -3,12 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Session as FacadesSession;
 
 class SessionController extends Controller
 {
@@ -53,7 +55,10 @@ $accepted = User::create($kee);
 
 
 if($accepted) {
-        return redirect('session')->withSuccess("You have successfully created an account!");
+    FacadesSession::flash('email', $request->email);
+    FacadesSession::flash('password', $request->password);
+            
+    return redirect('session')->withSuccess("You have successfully created an account!");
 
     } else {
         return redirect("session/create")->withError("Failed to register.");

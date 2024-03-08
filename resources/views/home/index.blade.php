@@ -21,7 +21,7 @@
 
 <nav aria-label="breadcrumb" class="pt-2 px-3">
     <ol class="breadcrumb">
-        <li class="breadcrumb-item active" aria-current="page">Home</li>
+        <li class="breadcrumb-item active" aria-current="page">{{ request()->segment(2) }}</li>
     </ol>
 </nav>
     <div class="pt-3">

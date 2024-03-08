@@ -13,7 +13,7 @@
 <nav aria-label="breadcrumb" class="pt-2 px-3">
     <ol class="breadcrumb">
         <li class="breadcrumb-item"><a href="{{ route('home.index') }}">Home</a></li>
-        <li class="breadcrumb-item active" aria-current="page">Album</li>
+        <li class="breadcrumb-item active" aria-current="page">Album /</li>
     </ol>
 </nav>
     @endsection

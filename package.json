@@ -1,13 +1,25 @@
 {
-    "private": true,
-    "type": "module",
-    "scripts": {
-        "dev": "vite",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "axios": "^1.6.4",
-        "laravel-vite-plugin": "^1.0.0",
-        "vite": "^5.0.0"
-    }
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "axios": "^1.6.4",
+    "laravel-mix": "^6.0.49",
+    "laravel-vite-plugin": "^1.0.0",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.35",
+    "vite": "^5.0.0"
+  },
+  "name": "gallery_revamped-beta",
+  "description": "\"Siege Albus, or SA is a gallery website to uniquely store and view your pictures anywhere, everywhere! SA also includes the feature to either like or comment other users creation. Revel in its eccentric experience now!\"",
+  "version": "1.0.0",
+  "main": "vite.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "author": "",
+  "license": "ISC"
 }
